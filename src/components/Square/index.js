@@ -14,11 +14,11 @@ const StyledSquare = styled.div`
   text-align: center;
   text-transform: uppercase;
 `
-StyledSquare.displayName = 'StyledSquare'
+StyledSquare.defaultName = 'StyledSquare'
 
-export default function Square ({ index, player }) {
+export default function Square ({ handleClick, index, player }) {
   return (
-    <StyledSquare index={index} player={player}>
+    <StyledSquare index={index} player={player} onClick={handleClick}>
       {player}
     </StyledSquare>
   )
